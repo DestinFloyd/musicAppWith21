@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import ArtistForm from './ArtistForm';
 
 class ArtistList extends Component {
     state = {
@@ -35,6 +36,7 @@ class ArtistList extends Component {
                         <Link to={`/artist/${artist.id}`} >{artist.name}</Link>
                     </div>
                 ))}
+                <ArtistForm fetchArtist={this.fetchArtists} />
             </div>
         );
     }
